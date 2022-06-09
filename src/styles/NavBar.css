@@ -1,0 +1,141 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background: #21325e;
+}
+
+.links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.links:hover {
+  color: red;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 25px;
+  font-size: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.navbar a:hover {
+  background-color: blue;
+  border-radius: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.toggleButton {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggleButton svg {
+  font-size: 50px;
+}
+.toggleButton button {
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#open {
+  animation: dropDownAnim 1s forwards;
+}
+
+@keyframes dropDownAnim {
+  0% {
+    height: 20vh;
+  }
+  10% {
+    height: 30vh;
+  }
+  20% {
+    height: 40vh;
+  }
+  30% {
+    height: 50vh;
+  }
+  40% {
+    height: 60vh;
+  }
+  40% {
+    height: 70vh;
+  }
+  50% {
+    height: 80vh;
+  }
+  60% {
+    height: 90vh;
+  }
+  70% {
+    height: 100vh;
+  }
+  80% {
+    height: 100vh;
+  }
+  90% {
+    height: 100vh;
+  }
+  100% {
+    height: 100vh;
+  }
+
+}
+
+#open .links {
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 100px;
+}
+
+#open a {
+  width: 200px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar a {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .toggleButton {
+    display: flex;
+  }
+  #close a {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .toggleButton {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+
+  #open {
+    height: 500px;
+  }
+
+  #open .links {
+    flex-direction: row;
+  }
+}
